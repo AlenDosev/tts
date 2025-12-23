@@ -1,0 +1,27 @@
+:root {
+  font-family: 'Urbanist', sans-serif;
+  --max-content-width: 1200px;
+  --color-primary: #ef556d;
+  --color-primary--darker: #ec3f59;
+  --primary-font: 'Urbanist', sans-serif;
+  --text-light-color: #e1e1e1;
+  --gray-bg: #efefef;
+  --light-bg: #f5f5f5;
+  --dark-bg: #232524;
+  --dark-text-color: #343d46;
+  --darkest-text-color: #2f373f;
+
+  @media (max-width: 1200px) {
+    --max-content-width: 100%;
+  }
+}
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #dbdbdb #ffffff;
+}
+
+body {
+  padding: 0px;
+  margin: 0px;
+}
