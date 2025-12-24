@@ -33,6 +33,11 @@ export default defineNuxtConfig({
       pathPrefix: true,
       global: true,
     },
+    {
+      path: '~/components/ui',
+      pathPrefix: false,
+      global: true,
+    },
   ],
   i18n: {
     defaultLocale: 'en',

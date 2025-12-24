@@ -1,14 +1,66 @@
 <template>
   <header class="header">
     <div class="header__main">
-      <nuxt-link to="/">
-        <nuxt-img class="header__logo" src="https://tts-nuxt.s3.eu-central-1.amazonaws.com/logo-light.avif" />
-      </nuxt-link>
-      <div class="header__actions">xxx</div>
+      <div class="header__content">
+        <nuxt-link to="/">
+          <nuxt-img class="header__logo" src="https://tts-nuxt.s3.eu-central-1.amazonaws.com/logo-light.avif" />
+        </nuxt-link>
+        <div class="header__actions">
+          <dropdown-menu
+            :model-value="locale"
+            :options="dropdownOptions"
+            class="header__language-selector"
+            @update:model-value="selectLanguage"
+          />
+        </div>
+        <button class="header__mobile-action" @click="mobileMenuOpen = true">
+          <bars3-icon class="header__mobile-action-icon" />
+        </button>
+      </div>
     </div>
+    <header-mobile-nav-menu
+      :mobile-menu-open="mobileMenuOpen"
+      :dropdown-options="dropdownOptions"
+      :locale="locale"
+      @click:close="mobileMenuOpen = false"
+      @select:language="selectLanguage"
+    />
   </header>
 </template>
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { Bars3Icon } from '@heroicons/vue/24/solid';
+const { getSelectedLanguage } = useCommon();
+const { locale } = useI18n();
+
+const mobileMenuOpen = ref(false);
+
+const dropdownOptions = computed((): DropdownOption[] => {
+  const result: DropdownOption[] = [];
+
+  result.push({
+    label: 'English',
+    value: 'en',
+  });
+  result.push({
+    label: 'Deutsch',
+    value: 'de',
+  });
+  result.push({
+    label: 'Français',
+    value: 'fr',
+  });
+  return result;
+});
+
+const selectLanguage = (lang: 'en' | 'fr' | 'de') => {
+  locale.value = lang;
+  localStorage.setItem('tts_selectedLocale', lang);
+};
+
+onBeforeMount(() => {
+  locale.value = getSelectedLanguage();
+});
+</script>
 <style lang="scss">
 .header {
   position: fixed;
@@ -33,18 +85,18 @@
     align-items: center;
   }
 
-  // &__content {
-  //   width: var(--max-content-width);
-  //   display: flex;
-  //   justify-content: space-between;
-  //   height: 100%;
-  //   z-index: 2;
-  //   padding: 0 16px;
+  &__content {
+    width: var(--max-content-width);
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    z-index: 2;
+    padding: 0 16px;
 
-  //   @include mobile-and-tablet {
-  //     padding: 0;
-  //   }
-  // }
+    @include mobile-and-tablet {
+      padding: 0;
+    }
+  }
 
   // &__link {
   //   height: 100%;
@@ -66,7 +118,7 @@
     height: 56px;
 
     @include mobile {
-      height: 36px;
+      height: 56px;
     }
   }
 
