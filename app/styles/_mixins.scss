@@ -1,0 +1,47 @@
+// new simplified breakpoints
+$tablet: 767px;
+$desktop: 1024px;
+$desktop-xl-min: 1520px;
+$desktop-xxl-min: 1920px;
+
+@mixin mobile {
+  @media (max-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin mobile-and-tablet {
+  @media (max-width: $desktop) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet + 1}) and (max-width: $desktop) {
+    @content;
+  }
+}
+
+@mixin tablet-and-desktop {
+  @media (min-width: #{$tablet + 1}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop + 1}) {
+    @content;
+  }
+}
+
+@mixin xl-desktop {
+  @media (min-width: #{$desktop-xl-min + 1}) {
+    @content;
+  }
+}
+
+@mixin xxl-desktop {
+  @media (min-width: #{$desktop-xxl-min + 1}) {
+    @content;
+  }
+}
