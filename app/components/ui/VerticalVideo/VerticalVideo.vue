@@ -45,6 +45,10 @@ const play = () => {
 
   &:hover {
     transform: scale(1.05);
+
+    @include mobile {
+      transform: scale(1);
+    }
   }
 
   &__element {

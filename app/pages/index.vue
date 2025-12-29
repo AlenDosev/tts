@@ -137,18 +137,19 @@ useSeoMeta({
     margin: 0;
 
     @include mobile {
-      font-size: 18px;
+      font-size: 26px;
     }
   }
 
   &__text {
     text-align: center;
     margin-top: 8px;
+    margin-bottom: 0;
     color: var(--dark-text-color);
     font-size: 17px;
 
     @include mobile {
-      font-size: 13px;
+      font-size: 16px;
     }
   }
 }
