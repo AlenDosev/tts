@@ -1,0 +1,14 @@
+{
+  "name": "TTS-renovation.ch",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2B373D",
+  "icons": [
+    {
+      "src": "/logo.avif",
+      "type": "image/avif",
+      "sizes": "416x416"
+    }
+  ]
+}

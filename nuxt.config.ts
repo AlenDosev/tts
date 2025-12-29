@@ -8,8 +8,36 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
-      link: [{ rel: 'icon', type: 'image/avif', href: '/logo.avif' }],
+      link: [
+        { rel: 'icon', type: 'image/avif', href: '/logo.avif' },
+        {
+          rel: 'preconnect',
+          href: 'https://fonts.googleapis.com',
+        },
+        {
+          rel: 'preconnect',
+          href: 'https://fonts.gstatic.com',
+          crossorigin: '',
+        },
+        {
+          rel: 'stylesheet',
+          href: 'https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Ruda:wght@400..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap',
+        },
+        {
+          rel: 'manifest',
+          href: '/manifest.json',
+        },
+      ],
     },
+    meta: [
+      {
+        name: 'viewport',
+        content: 'width=device-width, initial-scale=1',
+      },
+      {
+        charset: 'utf-8',
+      },
+    ],
   },
   vite: {
     css: {

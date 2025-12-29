@@ -8,5 +8,9 @@ definePageMeta({
   name: 'Index',
   layout: 'default',
 });
+
+useSeoMeta({
+  title: `Tts`,
+});
 </script>
 <style lang="scss"></style>

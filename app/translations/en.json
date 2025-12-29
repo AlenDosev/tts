@@ -1,3 +1,9 @@
 {
-  "common.language": "Language"
+  "common.language": "Language",
+  "contact.callUs": "Call us",
+  "contact.emailUs": "Email us",
+  "contact.replies": "Replies within 1-2 working days",
+  "contact.title": "We'd love to hear from you. Contact TTS to discuss your project, ask a question, or explore how we can work together.",
+  "nav.contact": "Contact",
+  "seo.contact": "Get in touch with TTS. Contact us today for questions about our projects. We look forward to hearing from you"
 }
