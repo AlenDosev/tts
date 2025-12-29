@@ -25,3 +25,18 @@ body {
   padding: 0px;
   margin: 0px;
 }
+
+.page {
+  width: var(--max-content-width);
+  margin: auto;
+  padding: 24px 0;
+
+  @include mobile {
+    padding: 24px 16px;
+    width: calc(var(--max-content-width) - 32px);
+  }
+
+  &__title {
+    margin: 0 0 24px 0;
+  }
+}

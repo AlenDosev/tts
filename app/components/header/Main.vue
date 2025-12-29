@@ -6,6 +6,17 @@
           <nuxt-img class="header__logo" src="https://tts-nuxt.s3.eu-central-1.amazonaws.com/logo-light.avif" />
         </nuxt-link>
         <div class="header__actions">
+          <nav class="header__nav">
+            <nuxt-link
+              to="/contact"
+              class="header__nav-item"
+              :class="{
+                selected: isSelected('Contact'),
+              }"
+            >
+              {{ $t('nav.contact') }}
+            </nuxt-link>
+          </nav>
           <dropdown-menu
             :model-value="locale"
             :options="dropdownOptions"
@@ -31,6 +42,7 @@
 import { Bars3Icon } from '@heroicons/vue/24/solid';
 const { getSelectedLanguage } = useCommon();
 const { locale } = useI18n();
+const route = useRoute();
 
 const mobileMenuOpen = ref(false);
 
@@ -55,6 +67,10 @@ const dropdownOptions = computed((): DropdownOption[] => {
 const selectLanguage = (lang: 'en' | 'fr' | 'de') => {
   locale.value = lang;
   localStorage.setItem('tts_selectedLocale', lang);
+};
+
+const isSelected = (val: string) => {
+  return val === route.name;
 };
 
 onBeforeMount(() => {
@@ -98,22 +114,6 @@ onBeforeMount(() => {
     }
   }
 
-  // &__link {
-  //   height: 100%;
-  //   display: flex;
-  //   align-items: center;
-  //   z-index: 2;
-  //   background-color: white;
-
-  //   @include tablet {
-  //     padding: 0 24px;
-  //   }
-
-  //   @include mobile {
-  //     padding: 0 16px;
-  //   }
-  // }
-
   &__logo {
     height: 56px;
 
@@ -143,33 +143,15 @@ onBeforeMount(() => {
       color: var(--dark-text-color);
       font-weight: 400;
       background-color: white;
+      text-decoration: none;
 
       &.selected {
         font-weight: 600;
-        border-bottom: 3px var(--color-primary) solid;
       }
-    }
-  }
 
-  &__nav-menu {
-    background-color: white;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
-    width: 100%;
-    position: absolute;
-    z-index: 1;
-    visibility: visible;
-    top: var(--nav-menu-top, -80dvh);
-    left: 0;
-    transition: all 0.2s;
-    pointer-events: none;
-
-    &.open {
-      pointer-events: all;
-      top: 60px;
-    }
-
-    @include mobile-and-tablet {
-      display: none;
+      &:hover {
+        font-weight: 600;
+      }
     }
   }
 
@@ -180,11 +162,6 @@ onBeforeMount(() => {
     @include mobile-and-tablet {
       display: none;
     }
-  }
-
-  &__buttons {
-    display: flex;
-    align-items: center;
   }
 
   &__language-selector {

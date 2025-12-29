@@ -7,6 +7,21 @@
 </template>
 <script setup lang="ts">
 import './main.scss';
+
+const appStore = useAppStore();
+
+let resizeObserver: ResizeObserver | null = null;
+
+const calculateMobile = () => {
+  appStore.isMobile = window.innerWidth < 768;
+};
+
+onMounted(async () => {
+  calculateMobile();
+
+  resizeObserver = new ResizeObserver(calculateMobile);
+  resizeObserver.observe(window.document.body);
+});
 </script>
 <style lang="scss" scoped>
 .content {
