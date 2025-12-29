@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: false },
-  modules: ['@nuxt/eslint', '@nuxt/image', '@nuxtjs/i18n', '@pinia/nuxt'],
+  modules: ['@pinia/nuxt', '@nuxt/eslint', '@nuxt/image', '@nuxtjs/i18n', '@pinia/nuxt'],
   nitro: {
     compressPublicAssets: true,
   },
@@ -75,6 +75,6 @@ export default defineNuxtConfig({
   },
   imports: {
     autoImport: true,
-    dirs: ['types'],
+    dirs: ['types', 'stores'],
   },
 });

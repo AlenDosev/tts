@@ -163,9 +163,9 @@ watch(locale, () => calculateNames());
       }
 
       &-icon {
-        color: #9a2a33;
-        fill: #fad6d9;
-        background-color: #fad6d9;
+        color: #ef6808;
+        fill: #fde4d2;
+        background-color: #fde4d2;
         width: 32px;
         border-radius: 8px;
         padding: 9px;
