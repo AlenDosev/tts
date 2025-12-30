@@ -1,4 +1,5 @@
 <template>
+  <colage-grid />
   <div class="arts">
     <div class="arts__content">
       <div class="arts__wrapper">
@@ -79,7 +80,7 @@ useSeoMeta({
 
 .arts {
   background-color: white;
-  padding: 96px 0;
+  padding: 40px 0 96px 0;
   width: 100%;
 
   @include tablet {
