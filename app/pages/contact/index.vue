@@ -2,6 +2,10 @@
   <div class="page contact">
     <h1 class="contact__title">{{ $t('nav.contact') }}</h1>
     <p class="contact__description">{{ $t('contact.title') }}</p>
+    <br />
+    <p class="contact__emergency">
+      <b>{{ $t('contact.emergency') }}</b>
+    </p>
     <div class="contact__grid">
       <div class="contact__grid-element">
         <div class="contact__grid-element-top">
@@ -64,7 +68,7 @@ const calculateNames = () => {
   const fridayDate = new Date(Date.UTC(2023, 0, 6));
   const monday = Intl.DateTimeFormat(locale.value, { weekday: 'short' }).format(mondayDate).replace(/\./g, '');
   const friday = Intl.DateTimeFormat(locale.value, { weekday: 'short' }).format(fridayDate).replace(/\./g, '');
-  timesOpen.value = `${monday}-${friday} 9AM-5PM`;
+  timesOpen.value = `${monday}-${friday} 8AM-5PM`;
 };
 
 onBeforeMount(() => calculateNames());
@@ -106,6 +110,28 @@ watch(locale, () => calculateNames());
     font-weight: 500;
     width: 50%;
     margin: auto;
+
+    @include tablet {
+      width: 80%;
+    }
+
+    @include mobile {
+      width: calc(100% - 32px);
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+
+  &__emergency {
+    color: var(--banner-description-color, #2f373f);
+    font-size: 22px;
+    line-height: 26px;
+    font-family: var(--primary-font);
+    text-align: center;
+    font-weight: 500;
+    width: 50%;
+    margin: auto;
+    margin-top: -8px;
 
     @include tablet {
       width: 80%;
