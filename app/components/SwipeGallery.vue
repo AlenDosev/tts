@@ -1,28 +1,28 @@
 <template>
   <div class="swiper gallery-swiper">
     <div class="swiper-wrapper">
-      <div class="swiper-slide" v-for="(image, index) in images" :key="index">
+      <div v-for="(image, index) in images" :key="index" class="swiper-slide">
         <img class="gallery-swiper__image" :src="image" />
       </div>
     </div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next" />
+    <div class="swiper-button-prev" />
   </div>
 </template>
 <script setup lang="ts">
 import { Swiper } from 'swiper';
 import { EffectFade, Navigation, Pagination } from 'swiper/modules';
 
-const props = defineProps({
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/effect-fade';
+
+defineProps({
   images: {
     type: Array as PropType<string[]>,
     default: () => [],
   },
 });
-
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/effect-fade';
 
 const swiper = ref<any>();
 
@@ -42,7 +42,6 @@ onMounted(() => {
   width: 100%;
   height: 100%;
   position: relative;
-  background-color: #232524;
   border-radius: 16px;
 
   --swiper-navigation-color: white;
@@ -50,7 +49,7 @@ onMounted(() => {
   &__image {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
   }
 }
 </style>

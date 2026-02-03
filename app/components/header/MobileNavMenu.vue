@@ -9,9 +9,13 @@
         <button class="mobile-nav__close" @click="$emit('click:close')">
           <x-mark-icon class="header__mobile-action-icon" />
         </button>
+        <nuxt-link to="/tiles" class="mobile-nav__element" @click="$emit('click:close')">
+          {{ $t('home.tiles.title') }}
+        </nuxt-link>
         <nuxt-link to="/contact" class="mobile-nav__element" @click="$emit('click:close')">
           {{ $t('nav.contact') }}
         </nuxt-link>
+
         <c-collapsible full-width :title="$t('common.language')" class="mobile-nav__collapsible">
           <button
             v-for="language in dropdownOptions"
@@ -164,8 +168,7 @@ defineProps({
 
   &__element {
     text-decoration: none;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
+
     color: black;
 
     padding: 6px 16px;
@@ -180,6 +183,11 @@ defineProps({
     display: flex;
     justify-content: flex-start;
     align-items: center;
+
+    &:first-of-type {
+      border-top-right-radius: 10px;
+      border-top-left-radius: 10px;
+    }
   }
 }
 </style>
