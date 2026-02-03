@@ -8,6 +8,15 @@
         <div class="header__actions">
           <nav class="header__nav">
             <nuxt-link
+              to="/tiles"
+              class="header__nav-item"
+              :class="{
+                selected: isSelected('Tiles'),
+              }"
+            >
+              {{ $t('home.tiles.title') }}
+            </nuxt-link>
+            <nuxt-link
               to="/contact"
               class="header__nav-item"
               :class="{
