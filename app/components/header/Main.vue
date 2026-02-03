@@ -118,7 +118,9 @@ onBeforeMount(() => {
     height: 56px;
 
     @include mobile {
-      height: 56px;
+      height: 54px;
+      margin-left: 4px;
+      margin-top: 2px;
     }
   }
 

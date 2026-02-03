@@ -80,6 +80,12 @@ import { EnvelopeIcon, PhoneIcon } from '@heroicons/vue/24/outline';
     gap: 30px;
     max-width: 100%;
     margin: 0 auto;
+
+    @include mobile {
+      align-items: space-between;
+      margin: 0;
+      gap: 48px;
+    }
   }
 
   &__item {
@@ -87,6 +93,11 @@ import { EnvelopeIcon, PhoneIcon } from '@heroicons/vue/24/outline';
     min-width: 250px;
     display: flex;
     flex-direction: column;
+
+    @include mobile {
+      max-width: 50%;
+      min-width: unset;
+    }
 
     &-row {
       display: flex;
