@@ -25,7 +25,7 @@
       </div>
 
       <div class="arts__wrapper">
-        <div class="arts__item">
+        <div class="arts__item" @click="navigateTo('/tiles')">
           <nuxt-img class="arts__logo" src="https://tts-nuxt.s3.eu-central-1.amazonaws.com/tiles-icon.avif" />
           <h2 class="arts__title">{{ $t('home.tiles.title') }}</h2>
           <p class="arts__text">{{ $t('home.tiles.description') }}</p>
@@ -108,6 +108,7 @@ useSeoMeta({
     display: flex;
     justify-content: center;
     flex-direction: column;
+    cursor: pointer;
 
     @include mobile {
       width: 100%;
