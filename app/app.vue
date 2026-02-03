@@ -4,6 +4,7 @@
   <div class="content">
     <NuxtPage />
   </div>
+  <footer-main />
 </template>
 <script setup lang="ts">
 import './main.scss';

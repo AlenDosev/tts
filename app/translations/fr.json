@@ -1,4 +1,18 @@
 {
   "common.language": "Langue",
-  "contact.emergency": "Dépannage 24/7"
+  "common.phone": "Téléphone",
+  "contact.callUs": "Appelez-nous",
+  "contact.emailUs": "Envoyez-nous un e-mail",
+  "contact.emergency": "Dépannage 24/7",
+  "contact.replies": "Réponse sous 1 à 2 jours ouvrables",
+  "contact.title": "Nous serions ravis d'échanger avec vous. Contactez TTS pour discuter de votre projet, poser une question ou explorer les possibilités de collaboration.",
+  "home.plumbing.description": "Réparations et installations professionnelles garantissant des systèmes d'eau et d'évacuation efficaces et sans fuite.",
+  "home.plumbing.title": "Plomberie",
+  "home.renovation.description": "Transformation complète de votre maison, des rénovations structurelles aux finitions modernes, sur mesure selon votre vision",
+  "home.renovation.title": "Rénovation",
+  "home.tiles.description": "Installation experte de céramique, de porcelaine et de pierre pour des murs et des sols durables et élégants",
+  "home.tiles.title": "Carrelage",
+  "nav.contact": "Contact",
+  "seo.contact": "N'hésitez pas à contacter TTS. Contactez-nous dès aujourd'hui pour toute question concernant nos projets. Nous serons ravis de vous répondre.",
+  "seo.index": "Services professionnels de rénovation, plomberie et carrelage en Suisse. De la transformation complète de votre maison à la pose experte de carrelage. Un travail de qualité signé TTS Renovation."
 }

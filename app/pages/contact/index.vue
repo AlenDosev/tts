@@ -108,7 +108,7 @@ watch(locale, () => calculateNames());
     font-family: var(--primary-font);
     text-align: center;
     font-weight: 500;
-    width: 50%;
+    width: 62%;
     margin: auto;
 
     @include tablet {

@@ -1,4 +1,18 @@
 {
   "common.language": "Sprache",
-  "contact.emergency": "Notfallreparatur 24/7"
+  "common.phone": "Telefon",
+  "contact.callUs": "Rufen Sie uns an",
+  "contact.emailUs": "Schreib uns",
+  "contact.emergency": "Notfallreparatur 24/7",
+  "contact.replies": "Antwort innerhalb von 1-2 Werktagen",
+  "contact.title": "Wir freuen uns, von Ihnen zu hören. Kontaktieren Sie TTS, um Ihr Projekt zu besprechen, eine Frage zu stellen oder herauszufinden, wie wir zusammenarbeiten können.",
+  "home.plumbing.description": "Professionelle Reparaturen und Installationen gewährleisten effiziente und leckagefreie Wasser- und Abwassersysteme.",
+  "home.plumbing.title": "Sanitär",
+  "home.renovation.description": "Komplette Hausumgestaltungen, von strukturellen Modernisierungen bis hin zu modernen Ausstattungen, maßgeschneidert auf Ihre Vision",
+  "home.renovation.title": "Renovierung",
+  "home.tiles.description": "Fachgerechte Verlegung von Keramik, Porzellan und Stein für langlebige und stilvolle Wände und Böden",
+  "home.tiles.title": "Fliesen",
+  "nav.contact": "Kontakt",
+  "seo.contact": "Nehmen Sie Kontakt mit TTS auf. Kontaktieren Sie uns noch heute bei Fragen zu unseren Projekten. Wir freuen uns auf Ihre Nachricht.",
+  "seo.index": "Professionelle Renovierungs-, Sanitär- und Fliesenlegerarbeiten in der Schweiz. Von Komplettsanierungen bis hin zur fachgerechten Fliesenverlegung. Qualitätsarbeit von TTS Renovation."
 }

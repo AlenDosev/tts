@@ -1,10 +1,18 @@
 {
   "common.language": "Language",
+  "common.phone": "Phone",
   "contact.callUs": "Call us",
   "contact.emailUs": "Email us",
   "contact.emergency": "Emergency repair 24/7",
   "contact.replies": "Replies within 1-2 working days",
   "contact.title": "We'd love to hear from you. Contact TTS to discuss your project, ask a question, or explore how we can work together.",
+  "home.plumbing.description": "Professional repairs and installations ensuring efficient, leak-free water and drainage systems",
+  "home.plumbing.title": "Plumbing",
+  "home.renovation.description": "Complete home transformations, from structural updates to modern finishes, tailored to your vision",
+  "home.renovation.title": "Renovation",
+  "home.tiles.description": "Expert installation of ceramic, porcelain, and stone for durable and stylish walls and floors",
+  "home.tiles.title": "Tiles",
   "nav.contact": "Contact",
-  "seo.contact": "Get in touch with TTS. Contact us today for questions about our projects. We look forward to hearing from you"
+  "seo.contact": "Get in touch with TTS. Contact us today for questions about our projects. We look forward to hearing from you",
+  "seo.index": "Professional renovation, plumbing, and tiling services in Switzerland. From complete home transformations to expert tile installation. Quality work by TTS Renovation."
 }

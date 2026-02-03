@@ -8,10 +8,8 @@
             class="arts__logo"
             src="https://tts-nuxt.s3.eu-central-1.amazonaws.com/construction-icon.avif"
           />
-          <h2 class="arts__title">Renovation</h2>
-          <p class="arts__text">
-            Complete home transformations, from structural updates to modern finishes, tailored to your vision
-          </p>
+          <h2 class="arts__title">{{ $t('home.renovation.title') }}</h2>
+          <p class="arts__text">{{ $t('home.renovation.description') }}</p>
         </div>
       </div>
 
@@ -21,20 +19,16 @@
             class="arts__logo"
             src="https://tts-nuxt.s3.eu-central-1.amazonaws.com/plumbing-icon.avif"
           />
-          <h2 class="arts__title">Plumbing</h2>
-          <p class="arts__text">
-            Professional repairs and installations ensuring efficient, leak-free water and drainage systems
-          </p>
+          <h2 class="arts__title">{{ $t('home.plumbing.title') }}</h2>
+          <p class="arts__text">{{ $t('home.plumbing.description') }}</p>
         </div>
       </div>
 
       <div class="arts__wrapper">
         <div class="arts__item">
           <nuxt-img class="arts__logo" src="https://tts-nuxt.s3.eu-central-1.amazonaws.com/tiles-icon.avif" />
-          <h2 class="arts__title">Tiles</h2>
-          <p class="arts__text">
-            Expert installation of ceramic, porcelain, and stone for durable and stylish walls and floors
-          </p>
+          <h2 class="arts__title">{{ $t('home.tiles.title') }}</h2>
+          <p class="arts__text">{{ $t('home.tiles.description') }}</p>
         </div>
       </div>
     </div>
@@ -60,6 +54,7 @@ definePageMeta({
 
 useSeoMeta({
   title: `Tts`,
+  description: $t('seo.index'),
 });
 </script>
 <style lang="scss">
