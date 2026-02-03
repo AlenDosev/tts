@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: false },
-  modules: ['@pinia/nuxt', '@nuxt/eslint', '@nuxt/image', '@nuxtjs/i18n', '@pinia/nuxt'],
+  modules: ['@pinia/nuxt', '@nuxt/eslint', '@nuxt/image', '@nuxtjs/i18n', '@pinia/nuxt', '@nuxt/scripts'],
   nitro: {
     compressPublicAssets: true,
   },
@@ -76,5 +76,15 @@ export default defineNuxtConfig({
   imports: {
     autoImport: true,
     dirs: ['types', 'stores'],
+  },
+  scripts: {
+    registry: {
+      googleTagManager: {
+        id: 'GTM-P4JG9XGB',
+      },
+      googleAnalytics: {
+        id: 'G-K36750VY6E',
+      },
+    },
   },
 });
