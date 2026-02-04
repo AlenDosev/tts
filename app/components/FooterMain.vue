@@ -8,7 +8,7 @@
         <div class="footer__item">
           <div class="footer__item-row">
             <envelope-icon class="footer__item-icon" />
-            <h4>E-Mail</h4>
+            <span class="footer__item-text">E-Mail</span>
           </div>
 
           <a href="mailto:tts.renovation@outlook.com" class="footer__link">tts.renovation@outlook.com</a>
@@ -16,7 +16,7 @@
         <div class="footer__item">
           <div class="footer__item-row">
             <phone-icon class="footer__item-icon" />
-            <h4>{{ $t('common.phone') }}</h4>
+            <span class="footer__item-text">{{ $t('common.phone') }}</span>
           </div>
 
           <a href="tel:+41761804757" class="footer__link">+41 76 180 47 57</a>
@@ -97,10 +97,12 @@ import { EnvelopeIcon, PhoneIcon } from '@heroicons/vue/24/outline';
   }
 
   &__item {
+    margin-top: 8px;
     flex: 1;
     min-width: 250px;
     display: flex;
     flex-direction: column;
+    gap: 12px;
 
     @include mobile {
       max-width: 50%;
@@ -117,6 +119,11 @@ import { EnvelopeIcon, PhoneIcon } from '@heroicons/vue/24/outline';
     &-icon {
       width: 28px;
       border-radius: 8px;
+    }
+
+    &-text {
+      font-size: 17px;
+      font-weight: 600;
     }
   }
 
