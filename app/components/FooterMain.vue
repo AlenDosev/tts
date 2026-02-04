@@ -24,6 +24,14 @@
       </div>
       <div class="footer__lower">
         <span>© 2026 TTS Renovation</span>
+        <nuxt-link target="_blank" to="https://www.instagram.com/tts_renovation">
+          <nuxt-img
+            class="footer__instagram"
+            alt="Instagram Logo"
+            loading="lazy"
+            src="https://tts-nuxt.s3.eu-central-1.amazonaws.com/instagram-logo.svg"
+          />
+        </nuxt-link>
       </div>
     </div>
   </footer>
@@ -64,7 +72,7 @@ import { EnvelopeIcon, PhoneIcon } from '@heroicons/vue/24/outline';
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 32px;
+    gap: 24px;
     margin-top: 32px;
 
     @include mobile {
@@ -114,6 +122,10 @@ import { EnvelopeIcon, PhoneIcon } from '@heroicons/vue/24/outline';
 
   &__link {
     color: black;
+  }
+
+  &__instagram {
+    height: 34px;
   }
 }
 </style>
