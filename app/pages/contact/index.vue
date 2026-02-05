@@ -26,7 +26,7 @@
         </div>
         <div class="contact__grid-element-bottom">
           <nuxt-link-locale href="tel:+31355334680" class="contact__grid-element-link">
-            +41 76 180 47 57
+            +41 76 280 47 57
           </nuxt-link-locale>
           <span class="contact__grid-element-description">{{ timesOpen }}</span>
         </div>
