@@ -9,6 +9,9 @@
         <button class="mobile-nav__close" @click="$emit('click:close')">
           <x-mark-icon class="header__mobile-action-icon" />
         </button>
+        <nuxt-link to="/plumbing" class="mobile-nav__element" @click="$emit('click:close')">
+          {{ $t('home.plumbing.title') }}
+        </nuxt-link>
         <nuxt-link to="/tiles" class="mobile-nav__element" @click="$emit('click:close')">
           {{ $t('home.tiles.title') }}
         </nuxt-link>

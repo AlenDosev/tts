@@ -8,7 +8,7 @@
         <div class="footer__item">
           <div class="footer__item-row">
             <envelope-icon class="footer__item-icon" />
-            <h4>E-Mail</h4>
+            <span class="footer__item-text">E-Mail</span>
           </div>
 
           <a href="mailto:tts.renovation@outlook.com" class="footer__link">tts.renovation@outlook.com</a>
@@ -16,7 +16,7 @@
         <div class="footer__item">
           <div class="footer__item-row">
             <phone-icon class="footer__item-icon" />
-            <h4>{{ $t('common.phone') }}</h4>
+            <span class="footer__item-text">{{ $t('common.phone') }}</span>
           </div>
 
           <a href="tel:+41761804757" class="footer__link">+41 76 180 47 57</a>
@@ -24,6 +24,14 @@
       </div>
       <div class="footer__lower">
         <span>© 2026 TTS Renovation</span>
+        <nuxt-link target="_blank" to="https://www.instagram.com/tts_renovation">
+          <nuxt-img
+            class="footer__instagram"
+            alt="Instagram Logo"
+            loading="lazy"
+            src="https://tts-nuxt.s3.eu-central-1.amazonaws.com/instagram-logo.svg"
+          />
+        </nuxt-link>
       </div>
     </div>
   </footer>
@@ -64,7 +72,7 @@ import { EnvelopeIcon, PhoneIcon } from '@heroicons/vue/24/outline';
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 32px;
+    gap: 24px;
     margin-top: 32px;
 
     @include mobile {
@@ -89,10 +97,12 @@ import { EnvelopeIcon, PhoneIcon } from '@heroicons/vue/24/outline';
   }
 
   &__item {
+    margin-top: 8px;
     flex: 1;
     min-width: 250px;
     display: flex;
     flex-direction: column;
+    gap: 12px;
 
     @include mobile {
       max-width: 50%;
@@ -110,10 +120,19 @@ import { EnvelopeIcon, PhoneIcon } from '@heroicons/vue/24/outline';
       width: 28px;
       border-radius: 8px;
     }
+
+    &-text {
+      font-size: 17px;
+      font-weight: 600;
+    }
   }
 
   &__link {
     color: black;
+  }
+
+  &__instagram {
+    height: 34px;
   }
 }
 </style>

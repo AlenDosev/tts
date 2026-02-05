@@ -8,6 +8,15 @@
         <div class="header__actions">
           <nav class="header__nav">
             <nuxt-link
+              to="/plumbing"
+              class="header__nav-item"
+              :class="{
+                selected: isSelected('Plumbing'),
+              }"
+            >
+              {{ $t('home.plumbing.title') }}
+            </nuxt-link>
+            <nuxt-link
               to="/tiles"
               class="header__nav-item"
               :class="{

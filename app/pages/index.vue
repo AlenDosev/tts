@@ -14,7 +14,7 @@
       </div>
 
       <div class="arts__wrapper">
-        <div class="arts__item">
+        <div class="arts__item" @click="navigateTo('/plumbing')">
           <nuxt-img
             class="arts__logo"
             src="https://tts-nuxt.s3.eu-central-1.amazonaws.com/plumbing-icon.avif"
