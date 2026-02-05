@@ -3,7 +3,11 @@
     <div class="header__main">
       <div class="header__content">
         <nuxt-link to="/">
-          <nuxt-img class="header__logo" src="https://tts-nuxt.s3.eu-central-1.amazonaws.com/logo-light.avif" />
+          <nuxt-img
+            class="header__logo"
+            src="https://defma1gvj98ta.cloudfront.net/logo-light.avif"
+            alt="TTS Renovation logo"
+          />
         </nuxt-link>
         <div class="header__actions">
           <nav class="header__nav">

@@ -25,33 +25,33 @@ useSeoMeta({
 });
 
 const p1Images: string[] = [
-  'https://tts-nuxt.s3.eu-central-1.amazonaws.com/tiles/p-1/1.avif',
-  'https://tts-nuxt.s3.eu-central-1.amazonaws.com/tiles/p-1/2.avif',
-  'https://tts-nuxt.s3.eu-central-1.amazonaws.com/tiles/p-1/3.avif',
-  'https://tts-nuxt.s3.eu-central-1.amazonaws.com/tiles/p-1/4.avif',
-  'https://tts-nuxt.s3.eu-central-1.amazonaws.com/tiles/p-1/5.avif',
-  'https://tts-nuxt.s3.eu-central-1.amazonaws.com/tiles/p-1/6.avif',
-  'https://tts-nuxt.s3.eu-central-1.amazonaws.com/tiles/p-1/7.avif',
+  'https://defma1gvj98ta.cloudfront.net/tiles/p-1/1.avif',
+  'https://defma1gvj98ta.cloudfront.net/tiles/p-1/2.avif',
+  'https://defma1gvj98ta.cloudfront.net/tiles/p-1/3.avif',
+  'https://defma1gvj98ta.cloudfront.net/tiles/p-1/4.avif',
+  'https://defma1gvj98ta.cloudfront.net/tiles/p-1/5.avif',
+  'https://defma1gvj98ta.cloudfront.net/tiles/p-1/6.avif',
+  'https://defma1gvj98ta.cloudfront.net/tiles/p-1/7.avif',
 ];
 
 const p2Images: string[] = [
-  'https://tts-nuxt.s3.eu-central-1.amazonaws.com/tiles/p-2/1.avif',
-  'https://tts-nuxt.s3.eu-central-1.amazonaws.com/tiles/p-2/2.avif',
-  'https://tts-nuxt.s3.eu-central-1.amazonaws.com/tiles/p-2/3.avif',
-  'https://tts-nuxt.s3.eu-central-1.amazonaws.com/tiles/p-2/4.avif',
-  'https://tts-nuxt.s3.eu-central-1.amazonaws.com/tiles/p-2/5.avif',
-  'https://tts-nuxt.s3.eu-central-1.amazonaws.com/tiles/p-2/6.avif',
-  'https://tts-nuxt.s3.eu-central-1.amazonaws.com/tiles/p-2/7.avif',
+  'https://defma1gvj98ta.cloudfront.net/tiles/p-2/1.avif',
+  'https://defma1gvj98ta.cloudfront.net/tiles/p-2/2.avif',
+  'https://defma1gvj98ta.cloudfront.net/tiles/p-2/3.avif',
+  'https://defma1gvj98ta.cloudfront.net/tiles/p-2/4.avif',
+  'https://defma1gvj98ta.cloudfront.net/tiles/p-2/5.avif',
+  'https://defma1gvj98ta.cloudfront.net/tiles/p-2/6.avif',
+  'https://defma1gvj98ta.cloudfront.net/tiles/p-2/7.avif',
 ];
 
 const p3Images: string[] = [
-  'https://tts-nuxt.s3.eu-central-1.amazonaws.com/tiles/p-3/1.avif',
-  'https://tts-nuxt.s3.eu-central-1.amazonaws.com/tiles/p-3/2.avif',
-  'https://tts-nuxt.s3.eu-central-1.amazonaws.com/tiles/p-3/3.avif',
-  'https://tts-nuxt.s3.eu-central-1.amazonaws.com/tiles/p-3/4.avif',
-  'https://tts-nuxt.s3.eu-central-1.amazonaws.com/tiles/p-3/5.avif',
-  'https://tts-nuxt.s3.eu-central-1.amazonaws.com/tiles/p-3/6.avif',
-  'https://tts-nuxt.s3.eu-central-1.amazonaws.com/tiles/p-3/7.avif',
+  'https://defma1gvj98ta.cloudfront.net/tiles/p-3/1.avif',
+  'https://defma1gvj98ta.cloudfront.net/tiles/p-3/2.avif',
+  'https://defma1gvj98ta.cloudfront.net/tiles/p-3/3.avif',
+  'https://defma1gvj98ta.cloudfront.net/tiles/p-3/4.avif',
+  'https://defma1gvj98ta.cloudfront.net/tiles/p-3/5.avif',
+  'https://defma1gvj98ta.cloudfront.net/tiles/p-3/6.avif',
+  'https://defma1gvj98ta.cloudfront.net/tiles/p-3/7.avif',
 ];
 </script>
 <style lang="scss" scoped>

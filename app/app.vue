@@ -1,9 +1,9 @@
 <template>
   <header-main />
 
-  <div class="content">
+  <main class="content">
     <NuxtPage />
-  </div>
+  </main>
   <footer-main />
 </template>
 <script setup lang="ts">

@@ -29,7 +29,7 @@
             class="footer__instagram"
             alt="Instagram Logo"
             loading="lazy"
-            src="https://tts-nuxt.s3.eu-central-1.amazonaws.com/instagram-logo.svg"
+            src="https://defma1gvj98ta.cloudfront.net/instagram-logo.svg"
           />
         </nuxt-link>
       </div>
