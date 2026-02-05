@@ -34,7 +34,11 @@
     </div>
   </div>
   <div class="contact__office">
-    <nuxt-img class="contact__office-img" src="https://tts-nuxt.s3.eu-central-1.amazonaws.com/contact.avif" />
+    <nuxt-img
+      class="contact__office-img"
+      src="https://defma1gvj98ta.cloudfront.net/contact.avif"
+      alt="TTS Renovation team on a renovation site"
+    />
   </div>
 </template>
 <script setup lang="ts">

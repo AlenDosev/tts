@@ -2,7 +2,7 @@
   <div class="swiper gallery-swiper">
     <div class="swiper-wrapper">
       <div v-for="(image, index) in images" :key="index" class="swiper-slide">
-        <img class="gallery-swiper__image" :src="image" />
+        <nuxt-img class="gallery-swiper__image" :src="image" :alt="`Project photo ${index + 1}`" />
       </div>
     </div>
     <div class="swiper-button-next" />

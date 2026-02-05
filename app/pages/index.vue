@@ -6,7 +6,8 @@
         <div class="arts__item">
           <nuxt-img
             class="arts__logo"
-            src="https://tts-nuxt.s3.eu-central-1.amazonaws.com/construction-icon.avif"
+            src="https://defma1gvj98ta.cloudfront.net/construction-icon.avif"
+            alt="Construction and renovation services icon"
           />
           <h2 class="arts__title">{{ $t('home.renovation.title') }}</h2>
           <p class="arts__text">{{ $t('home.renovation.description') }}</p>
@@ -17,7 +18,8 @@
         <div class="arts__item" @click="navigateTo('/plumbing')">
           <nuxt-img
             class="arts__logo"
-            src="https://tts-nuxt.s3.eu-central-1.amazonaws.com/plumbing-icon.avif"
+            src="https://defma1gvj98ta.cloudfront.net/plumbing-icon.avif"
+            alt="Plumbing services icon"
           />
           <h2 class="arts__title">{{ $t('home.plumbing.title') }}</h2>
           <p class="arts__text">{{ $t('home.plumbing.description') }}</p>
@@ -26,7 +28,11 @@
 
       <div class="arts__wrapper">
         <div class="arts__item" @click="navigateTo('/tiles')">
-          <nuxt-img class="arts__logo" src="https://tts-nuxt.s3.eu-central-1.amazonaws.com/tiles-icon.avif" />
+          <nuxt-img
+            class="arts__logo"
+            src="https://defma1gvj98ta.cloudfront.net/tiles-icon.avif"
+            alt="Tile installation services icon"
+          />
           <h2 class="arts__title">{{ $t('home.tiles.title') }}</h2>
           <p class="arts__text">{{ $t('home.tiles.description') }}</p>
         </div>
@@ -36,9 +42,9 @@
   <div class="videos-section">
     <mobile-vertical-video v-if="isMobile" />
     <div v-else class="videos-section__content">
-      <vertical-video src="https://tts-nuxt.s3.eu-central-1.amazonaws.com/video-1.mov" />
-      <vertical-video src="https://tts-nuxt.s3.eu-central-1.amazonaws.com/video-2.mov" />
-      <vertical-video src="https://tts-nuxt.s3.eu-central-1.amazonaws.com/video-3.mov" />
+      <vertical-video src="https://defma1gvj98ta.cloudfront.net/video-1.mov" />
+      <vertical-video src="https://defma1gvj98ta.cloudfront.net/video-2.mov" />
+      <vertical-video src="https://defma1gvj98ta.cloudfront.net/video-3.mov" />
     </div>
   </div>
 </template>

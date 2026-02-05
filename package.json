@@ -9,6 +9,7 @@
     "format": "prettier --write app/",
     "lint": "eslint . --fix",
     "scripts": "sh scripts/execute-scripts.sh",
+    "start": "nuxt build && nuxt preview",
     "prep": "npm run scripts && npx nuxt typecheck && npm run lint && npm run format"
   },
   "dependencies": {

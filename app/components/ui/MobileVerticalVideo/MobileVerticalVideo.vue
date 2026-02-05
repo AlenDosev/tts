@@ -2,13 +2,13 @@
   <div class="swiper customer-swiper__swiper">
     <div class="swiper-wrapper">
       <div class="swiper-slide customer-swiper__slide">
-        <vertical-video src="https://tts-nuxt.s3.eu-central-1.amazonaws.com/video-1.mov" />
+        <vertical-video src="https://defma1gvj98ta.cloudfront.net/video-1.mov" />
       </div>
       <div class="swiper-slide customer-swiper__slide">
-        <vertical-video src="https://tts-nuxt.s3.eu-central-1.amazonaws.com/video-2.mov" />
+        <vertical-video src="https://defma1gvj98ta.cloudfront.net/video-2.mov" />
       </div>
       <div class="swiper-slide customer-swiper__slide">
-        <vertical-video src="https://tts-nuxt.s3.eu-central-1.amazonaws.com/video-3.mov" />
+        <vertical-video src="https://defma1gvj98ta.cloudfront.net/video-3.mov" />
       </div>
     </div>
     <div class="customer-swiper__actions">
