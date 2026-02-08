@@ -4,7 +4,7 @@
     <p class="page__description">{{ $t('tiles.description') }}</p>
     <p class="page__description">{{ $t('tiles.description2') }}</p>
   </div>
-  <div class="tiles__gallery">
+  <div class="page__gallery">
     <div class="tiles__content">
       <swipe-gallery :images="p1Images" />
       <swipe-gallery :images="p2Images" />
@@ -56,15 +56,6 @@ const p3Images: string[] = [
 </script>
 <style lang="scss" scoped>
 .tiles {
-  &__gallery {
-    padding: 64px 128px;
-    background-color: #232524;
-
-    @include mobile {
-      padding: 64px 16px;
-    }
-  }
-
   &__content {
     aspect-ratio: 2.4;
     width: 100%;
