@@ -1,8 +1,8 @@
 <template>
   <div class="page">
-    <h1 class="tiles__title">{{ $t('home.tiles.title') }}</h1>
-    <p class="tiles__description">{{ $t('tiles.description') }}</p>
-    <p class="tiles__description">{{ $t('tiles.description2') }}</p>
+    <h1 class="page__title">{{ $t('home.tiles.title') }}</h1>
+    <p class="page__description">{{ $t('tiles.description') }}</p>
+    <p class="page__description">{{ $t('tiles.description2') }}</p>
   </div>
   <div class="tiles__gallery">
     <div class="tiles__content">
@@ -56,34 +56,6 @@ const p3Images: string[] = [
 </script>
 <style lang="scss" scoped>
 .tiles {
-  &__title {
-    font-size: 58px;
-    margin: 0 0 16px;
-    text-align: center;
-    width: 100%;
-    font-weight: 800;
-    font-family: Ruda;
-
-    @include mobile {
-      font-size: 54px;
-    }
-  }
-
-  &__description {
-    color: #2f373f;
-    font-size: 19px;
-    font-weight: 500;
-    line-height: 26px;
-    margin: auto;
-    text-align: center;
-    width: 64%;
-    margin-top: 16px;
-
-    @include mobile {
-      width: 100%;
-    }
-  }
-
   &__gallery {
     padding: 64px 128px;
     background-color: #232524;

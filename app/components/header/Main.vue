@@ -12,6 +12,15 @@
         <div class="header__actions">
           <nav class="header__nav">
             <nuxt-link
+              to="/renovation"
+              class="header__nav-item"
+              :class="{
+                selected: isSelected('Renovation'),
+              }"
+            >
+              {{ $t('home.renovation.title') }}
+            </nuxt-link>
+            <nuxt-link
               to="/plumbing"
               class="header__nav-item"
               :class="{
@@ -159,22 +168,24 @@ onBeforeMount(() => {
     &-item {
       padding: 0 16px;
       font-size: 20px;
-      border-bottom: 3px white solid;
-      height: calc(100% - 3px);
+      height: calc(100% - 1px);
       display: flex;
       justify-content: center;
       align-items: center;
       color: var(--dark-text-color);
       font-weight: 400;
-      background-color: white;
+      background-color: transparent;
       text-decoration: none;
 
       &.selected {
-        font-weight: 600;
+        font-weight: 500;
+        color: black;
+        border-bottom: 2px solid var(--dark-text-color);
       }
 
       &:hover {
-        font-weight: 600;
+        font-weight: 500;
+        color: black;
       }
     }
   }

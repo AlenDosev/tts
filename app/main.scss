@@ -59,6 +59,30 @@ body {
   }
 
   &__title {
-    margin: 0 0 24px 0;
+    font-size: 56px;
+    margin: 0 0 16px;
+    text-align: center;
+    width: 100%;
+    font-weight: 800;
+    font-family: Ruda;
+
+    @include mobile {
+      font-size: 50px;
+    }
+  }
+
+  &__description {
+    color: #2f373f;
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 26px;
+    margin: auto;
+    text-align: center;
+    width: 64%;
+    margin-top: 16px;
+
+    @include mobile {
+      width: 100%;
+    }
   }
 }

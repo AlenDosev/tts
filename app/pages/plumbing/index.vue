@@ -1,8 +1,8 @@
 <template>
   <div class="page">
-    <h1 class="tiles__title">{{ $t('home.plumbing.title') }}</h1>
-    <p class="tiles__description">{{ $t('tiles.description') }}</p>
-    <p class="tiles__description">{{ $t('tiles.description2') }}</p>
+    <h1 class="page__title">{{ $t('home.plumbing.title') }}</h1>
+    <p class="page__description">{{ $t('plumbing.description') }}</p>
+    <p class="page__description">{{ $t('plumbing.description2') }}</p>
   </div>
   <div class="tiles__gallery" />
 </template>

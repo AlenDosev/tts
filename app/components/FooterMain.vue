@@ -19,7 +19,7 @@
             <span class="footer__item-text">{{ $t('common.phone') }}</span>
           </div>
 
-          <a href="tel:+41761804757" class="footer__link">+41 76 180 47 57</a>
+          <a href="tel:+41762804757" class="footer__link">+41 76 280 47 57</a>
         </div>
       </div>
       <div class="footer__lower">

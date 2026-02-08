@@ -3,7 +3,7 @@
   <div class="arts">
     <div class="arts__content">
       <div class="arts__wrapper">
-        <div class="arts__item">
+        <div class="arts__item" @click="navigateTo('/renovation')">
           <nuxt-img
             class="arts__logo"
             src="https://defma1gvj98ta.cloudfront.net/construction-icon.avif"
