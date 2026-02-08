@@ -1,7 +1,7 @@
 <template>
   <div class="page contact">
-    <h1 class="contact__title">{{ $t('nav.contact') }}</h1>
-    <p class="contact__description">{{ $t('contact.title') }}</p>
+    <h1 class="page__title">{{ $t('nav.contact') }}</h1>
+    <p class="page__description">{{ $t('contact.title') }}</p>
     <br />
     <p class="contact__emergency">
       <b>{{ $t('contact.emergency') }}</b>
@@ -88,42 +88,6 @@ watch(locale, () => calculateNames());
   @include mobile {
     padding: 24px 8px;
     width: calc(var(--max-content-width) - 16px);
-  }
-
-  &__title {
-    font-size: 58px;
-    text-align: center;
-    width: 100%;
-    margin: 0 0 16px 0;
-
-    @include tablet {
-      font-size: 56px;
-    }
-
-    @include mobile {
-      font-size: 40px;
-    }
-  }
-
-  &__description {
-    color: var(--banner-description-color, #2f373f);
-    font-size: 19px;
-    line-height: 26px;
-    font-family: var(--primary-font);
-    text-align: center;
-    font-weight: 500;
-    width: 62%;
-    margin: auto;
-
-    @include tablet {
-      width: 80%;
-    }
-
-    @include mobile {
-      width: calc(100% - 32px);
-      font-size: 18px;
-      line-height: 24px;
-    }
   }
 
   &__emergency {
