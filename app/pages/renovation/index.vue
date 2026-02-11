@@ -64,9 +64,5 @@ const p2Images: string[] = [
       aspect-ratio: 0.75;
     }
   }
-
-  &__landscape {
-    height: 80dvw;
-  }
 }
 </style>
