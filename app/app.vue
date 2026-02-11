@@ -43,5 +43,9 @@ watch(locale, newValue => {
 .content {
   margin-top: 60px;
   min-height: calc(100dvh - 68px);
+
+  @include tablet {
+    min-height: calc(50dvh - 68px);
+  }
 }
 </style>

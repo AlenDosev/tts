@@ -87,8 +87,16 @@ body {
   }
 
   &__gallery {
-    padding: 64px 128px;
+    padding: 64px 32px;
     background-color: #232524;
+
+    @include desktop {
+      padding: 64px;
+    }
+
+    @include xl-desktop {
+      padding: 64px 128px;
+    }
 
     @include mobile {
       padding: 64px 0px;
