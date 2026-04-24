@@ -6,7 +6,6 @@
     "module": "ESNext",
     "allowJs": true,
     "composite": true,
-    "moduleResolution": "node",
     "verbatimModuleSyntax": false
   },
   "exclude": ["*.cjs"],
