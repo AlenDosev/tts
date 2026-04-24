@@ -1,5 +1,5 @@
 <template>
-  <colage-grid />
+  <hero-section />
   <div class="arts">
     <div class="arts__content">
       <div class="arts__wrapper">
