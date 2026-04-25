@@ -115,7 +115,7 @@ import { ArrowRightIcon, PhoneIcon } from '@heroicons/vue/24/outline';
     line-height: 0.96;
     letter-spacing: -0.02em;
     margin: 24px 0 0;
-    color: #111;
+    color: var(--darkest-text-color);
     text-wrap: balance;
 
     em {
@@ -166,17 +166,16 @@ import { ArrowRightIcon, PhoneIcon } from '@heroicons/vue/24/outline';
 
       &:hover {
         background: var(--color-primary--darker);
-        transform: translateY(-1px);
       }
     }
 
     &--ghost {
       background: #fff;
-      color: #111;
+      color: var(--darkest-text-color);
       border: 1px solid #dcdcdc;
 
       &:hover {
-        border-color: #111;
+        border-color: var(--darkest-text-color);
       }
     }
   }
@@ -198,7 +197,7 @@ import { ArrowRightIcon, PhoneIcon } from '@heroicons/vue/24/outline';
       font-weight: 800;
       font-size: 32px;
       display: block;
-      color: #111;
+      color: var(--darkest-text-color);
       letter-spacing: -0.01em;
     }
 
