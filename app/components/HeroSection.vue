@@ -190,6 +190,10 @@ import { ArrowRightIcon, PhoneIcon } from '@heroicons/vue/24/outline';
 
     > div {
       padding-right: 16px;
+
+      @include mobile {
+        padding-right: 8px;
+      }
     }
 
     strong {

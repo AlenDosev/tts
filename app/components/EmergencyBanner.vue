@@ -30,7 +30,7 @@ withDefaults(defineProps<{ phone?: string }>(), { phone: '+41 76 280 47 57' });
   min-width: calc(var(--max-content-width) - 80px);
 
   @include mobile {
-    margin-top: 56px;
+    margin: 32px 0;
     padding: 0 16px;
   }
 
@@ -40,6 +40,10 @@ withDefaults(defineProps<{ phone?: string }>(), { phone: '+41 76 280 47 57' });
     margin: 0;
     display: flex;
     justify-content: center;
+
+    @include mobile {
+      padding: 32px 0;
+    }
   }
 
   &__inner {

@@ -93,7 +93,7 @@ const serviceCards = computed(() => {
   padding: 0 20px;
 
   @include mobile {
-    margin-top: 64px;
+    margin-top: 48px;
     padding: 0 16px;
   }
 
@@ -103,6 +103,11 @@ const serviceCards = computed(() => {
     margin: 64px 0 0 0;
     display: flex;
     justify-content: center;
+
+    @include mobile {
+      margin: 32px 0 0 0;
+      padding: 32px 0 0 0;
+    }
   }
 
   &__head {
@@ -127,6 +132,10 @@ const serviceCards = computed(() => {
     display: flex;
     align-items: center;
     gap: 10px;
+
+    @include mobile {
+      gap: 8px;
+    }
 
     &::before {
       content: '';
@@ -247,6 +256,7 @@ const serviceCards = computed(() => {
     small {
       color: #5a6168;
       font-weight: 500;
+      font-size: 14px;
     }
   }
 
