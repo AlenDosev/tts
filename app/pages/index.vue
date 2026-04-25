@@ -1,6 +1,7 @@
 <template>
   <hero-section />
   <services-section />
+  <emergency-banner />
   <div class="videos-section">
     <mobile-vertical-video v-if="isMobile" />
     <div v-else class="videos-section__content">

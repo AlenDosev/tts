@@ -1,4 +1,6 @@
 {
+  "banner.emergency.sub": "TTS bietet 24/7-Notfallsanitärreparatur in der ganzen Schweiz. Echte Menschen, echtes Werkzeug, schnell vor Ort.",
+  "banner.emergency.title": "Rohrbruch? Verstopfter Abfluss? Wir sind auch um 3 Uhr morgens erreichbar.",
   "common.language": "Sprache",
   "common.phone": "Telefon",
   "contact.callUs": "Rufen Sie uns an",
@@ -35,7 +37,8 @@
   "home.services.eyebrow": "Was wir tun",
   "home.services.link": "Projekt starten",
   "home.services.order": "renovation,plumbing,tiles",
-  "home.services.title": "Drei Gewerke.<br/>Ein sorgfältiges Team.",
+  "home.services.title": "Drei Gewerke.",
+  "home.services.title2": "Ein sorgfältiges Team.",
   "home.tiles.description": "Fachgerechte Verlegung von Keramik, Porzellan und Stein — langlebige und stilvolle Wände und Böden.",
   "home.tiles.title": "Fliesen",
   "nav.contact": "Kontakt",

@@ -1,4 +1,6 @@
 {
+  "banner.emergency.sub": "TTS assure le dépannage plomberie 24/7 dans toute la Suisse. De vrais artisans, de vrais outils, chez vous rapidement.",
+  "banner.emergency.title": "Tuyau qui fuit ? Canalisation bouchée ? On décroche à 3h du matin.",
   "common.language": "Langue",
   "common.phone": "Téléphone",
   "contact.callUs": "Appelez-nous",
@@ -35,7 +37,8 @@
   "home.services.eyebrow": "Ce que nous faisons",
   "home.services.link": "Démarrer un projet",
   "home.services.order": "renovation,plumbing,tiles",
-  "home.services.title": "Trois métiers.<br/>Une équipe soigneuse.",
+  "home.services.title": "Trois métiers.",
+  "home.services.title2": "Une équipe soigneuse.",
   "home.tiles.description": "Pose experte de céramique, porcelaine et pierre — murs et sols durables et élégants.",
   "home.tiles.title": "Carrelage",
   "nav.contact": "Contact",

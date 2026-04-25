@@ -4,7 +4,11 @@
       <header class="services__head">
         <div>
           <div class="services__eyebrow">{{ $t('home.services.eyebrow') }}</div>
-          <h2 class="services__title" v-html="$t('home.services.title')" />
+          <h2 class="services__title">
+            <span>{{ $t('home.services.title') }}</span>
+            <br />
+            <span>{{ $t('home.services.title2') }}</span>
+          </h2>
         </div>
       </header>
 
@@ -33,9 +37,9 @@
 import { ArrowRightIcon } from '@heroicons/vue/24/outline';
 
 const IMG = {
-  renovation: 'https://defma1gvj98ta.cloudfront.net/grid/hwvbus2ziaued2cy7ugi.avif',
-  plumbing: 'https://defma1gvj98ta.cloudfront.net/grid/rgmcjqcrrzacf5h6lgu6.avif',
-  tiles: 'https://defma1gvj98ta.cloudfront.net/grid/dpdi5gsodi8lrftns8rt.avif',
+  renovation: 'https://defma1gvj98ta.cloudfront.net/renovation/p-1/1.avif',
+  plumbing: 'https://defma1gvj98ta.cloudfront.net/plumbing/p-2/1.avif',
+  tiles: 'https://defma1gvj98ta.cloudfront.net/tiles/p-2/1.avif',
 };
 
 const SERVICES = {
@@ -95,8 +99,8 @@ const serviceCards = computed(() => {
 
   &__wrapper {
     background-color: var(--light-bg);
-    padding: 64px 0;
-    margin: 64px 0;
+    padding: 64px 0 32px 0;
+    margin: 64px 0 0 0;
     display: flex;
     justify-content: center;
   }

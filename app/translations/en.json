@@ -1,4 +1,6 @@
 {
+  "banner.emergency.sub": "TTS offers 24/7 emergency plumbing repair across Switzerland. Real people, real tools, on your doorstep fast.",
+  "banner.emergency.title": "Burst pipe? Blocked drain? We pick up at 3am.",
   "common.language": "Language",
   "common.phone": "Phone",
   "contact.callUs": "Call us",
@@ -35,7 +37,8 @@
   "home.services.eyebrow": "What we do",
   "home.services.link": "Start a project",
   "home.services.order": "renovation,plumbing,tiles",
-  "home.services.title": "Three trades.<br/>One careful team.",
+  "home.services.title": "Three trades.",
+  "home.services.title2": "One careful team.",
   "home.tiles.description": "Expert installation of ceramic, porcelain and stone — durable and beautiful walls and floors.",
   "home.tiles.title": "Tiles",
   "nav.contact": "Contact",
