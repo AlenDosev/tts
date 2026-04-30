@@ -29,7 +29,7 @@ definePageMeta({
 });
 
 useSeoMeta({
-  title: `Tts`,
+  title: $t('seo.title'),
   description: $t('seo.index'),
 });
 </script>
