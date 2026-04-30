@@ -4,13 +4,12 @@
   <emergency-banner />
   <process-section />
   <div class="videos-section">
+    <div class="videos-section__header">
+      <div class="videos-section__eyebrow">{{ $t('videos.eyebrow') }}</div>
+      <h2 class="videos-section__title">{{ $t('videos.title') }}</h2>
+    </div>
     <mobile-vertical-video v-if="isMobile" />
     <template v-else>
-      <div class="videos-section__header">
-        <div class="videos-section__eyebrow">{{ $t('videos.eyebrow') }}</div>
-        <h2 class="videos-section__title">{{ $t('videos.title') }}</h2>
-      </div>
-
       <div class="videos-section__content">
         <vertical-video src="https://defma1gvj98ta.cloudfront.net/video-1.mov" />
         <vertical-video src="https://defma1gvj98ta.cloudfront.net/video-2.mov" />
@@ -40,6 +39,10 @@ useSeoMeta({
   padding: 96px 0;
   width: 100%;
 
+  @include mobile {
+    padding: 80px 0;
+  }
+
   &__content {
     width: var(--max-content-width);
     margin: auto;
@@ -52,6 +55,10 @@ useSeoMeta({
   &__header {
     width: var(--max-content-width);
     margin: 0 auto 32px auto;
+
+    @include mobile {
+      padding: 0 16px;
+    }
   }
 
   &__eyebrow {
