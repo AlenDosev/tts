@@ -1,4 +1,5 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
+import { defineNuxtConfig } from 'nuxt/config';
+
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: false },
@@ -73,5 +74,9 @@ export default defineNuxtConfig({
         id: 'G-K36750VY6E',
       },
     },
+  },
+  features: {
+    // Nuxt 4.4.5 drops <link> tags when styles are inlined, changing CSS cascade order
+    inlineStyles: false,
   },
 });
