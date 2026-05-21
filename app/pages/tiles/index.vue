@@ -20,8 +20,17 @@ definePageMeta({
 });
 
 useSeoMeta({
-  title: () => `Tts - ${t('home.tiles.title')}`,
-  description: () => t('home.tiles.description'),
+  title: () => `TTS - ${t('home.tiles.title')}`,
+  ogTitle: () => `TTS - ${t('home.tiles.title')}`,
+  twitterTitle: () => `TTS - ${t('home.tiles.title')}`,
+  description: () => t('seo.tiles'),
+  ogDescription: () => t('seo.tiles'),
+  twitterDescription: () => t('seo.tiles'),
+  ogUrl: 'https://tts-renovation.ch/tiles',
+});
+
+useHead({
+  link: [{ rel: 'canonical', href: 'https://tts-renovation.ch/tiles' }],
 });
 
 const p1Images: string[] = [

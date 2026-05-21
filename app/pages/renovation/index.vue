@@ -19,8 +19,17 @@ definePageMeta({
 });
 
 useSeoMeta({
-  title: () => `Tts - ${t('home.renovation.title')}`,
-  description: () => t('home.renovation.description'),
+  title: () => `TTS - ${t('home.renovation.title')}`,
+  ogTitle: () => `TTS - ${t('home.renovation.title')}`,
+  twitterTitle: () => `TTS - ${t('home.renovation.title')}`,
+  description: () => t('seo.renovation'),
+  ogDescription: () => t('seo.renovation'),
+  twitterDescription: () => t('seo.renovation'),
+  ogUrl: 'https://tts-renovation.ch/renovation',
+});
+
+useHead({
+  link: [{ rel: 'canonical', href: 'https://tts-renovation.ch/renovation' }],
 });
 
 const p1Images: string[] = [
