@@ -7,6 +7,7 @@
             class="header__logo"
             src="https://defma1gvj98ta.cloudfront.net/logo-light.avif"
             alt="TTS Renovation logo"
+            height="56px"
           />
         </nuxt-link>
         <div class="header__actions">
@@ -77,23 +78,11 @@ const route = useRoute();
 
 const mobileMenuOpen = ref(false);
 
-const dropdownOptions = computed((): DropdownOption[] => {
-  const result: DropdownOption[] = [];
-
-  result.push({
-    label: 'English',
-    value: 'en',
-  });
-  result.push({
-    label: 'Deutsch',
-    value: 'de',
-  });
-  result.push({
-    label: 'Français',
-    value: 'fr',
-  });
-  return result;
-});
+const dropdownOptions: DropdownOption[] = [
+  { label: 'English', value: 'en' },
+  { label: 'Deutsch', value: 'de' },
+  { label: 'Français', value: 'fr' },
+];
 
 const selectLanguage = (lang: 'en' | 'fr' | 'de') => {
   locale.value = lang;
@@ -105,7 +94,7 @@ const isSelected = (val: string) => {
 };
 
 onBeforeMount(() => {
-  locale.value = getSelectedLanguage();
+  locale.value = getSelectedLanguage() as 'en' | 'de' | 'fr';
 });
 </script>
 <style lang="scss">

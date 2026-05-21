@@ -19,8 +19,17 @@ definePageMeta({
 });
 
 useSeoMeta({
-  title: `Tts - ${t('home.plumbing.title')}`,
-  description: t('home.plumbing.description'),
+  title: () => `TTS - ${t('home.plumbing.title')}`,
+  ogTitle: () => `TTS - ${t('home.plumbing.title')}`,
+  twitterTitle: () => `TTS - ${t('home.plumbing.title')}`,
+  description: () => t('seo.plumbing'),
+  ogDescription: () => t('seo.plumbing'),
+  twitterDescription: () => t('seo.plumbing'),
+  ogUrl: 'https://tts-renovation.ch/plumbing',
+});
+
+useHead({
+  link: [{ rel: 'canonical', href: 'https://tts-renovation.ch/plumbing' }],
 });
 
 const p1Images: string[] = [

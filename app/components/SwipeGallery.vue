@@ -1,12 +1,12 @@
 <template>
-  <div class="swiper gallery-swiper">
+  <div ref="swiperEl" class="swiper gallery-swiper">
     <div class="swiper-wrapper">
       <div v-for="(image, index) in images" :key="index" class="swiper-slide">
         <nuxt-img class="gallery-swiper__image" :src="image" :alt="`Project photo ${index + 1}`" />
       </div>
     </div>
-    <div class="swiper-button-next" />
-    <div class="swiper-button-prev" />
+    <div ref="nextEl" class="swiper-button-next" />
+    <div ref="prevEl" class="swiper-button-prev" />
   </div>
 </template>
 <script setup lang="ts">
@@ -24,17 +24,25 @@ defineProps({
   },
 });
 
-const swiper = ref<any>();
+const swiperEl = ref<HTMLElement | null>(null);
+const nextEl = ref<HTMLElement | null>(null);
+const prevEl = ref<HTMLElement | null>(null);
+const swiper = ref<Swiper | null>(null);
 
 onMounted(() => {
-  swiper.value = new Swiper('.gallery-swiper', {
+  swiper.value = new Swiper(swiperEl.value!, {
     modules: [EffectFade, Navigation, Pagination],
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: nextEl.value,
+      prevEl: prevEl.value,
     },
     effect: 'fade',
   });
+});
+
+onUnmounted(() => {
+  swiper.value?.destroy(true, true);
+  swiper.value = null;
 });
 </script>
 <style lang="scss" scoped>

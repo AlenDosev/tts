@@ -17,7 +17,7 @@ const props = defineProps({
   },
 });
 
-const videoRef = ref<any>();
+const videoRef = ref<HTMLVideoElement | null>(null);
 
 const isPlaying = ref(false);
 

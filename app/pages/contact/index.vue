@@ -52,8 +52,17 @@ definePageMeta({
 });
 
 useSeoMeta({
-  title: `Tts - ${t('nav.contact')}`,
-  description: t('seo.contact'),
+  title: () => `TTS - ${t('nav.contact')}`,
+  ogTitle: () => `TTS - ${t('nav.contact')}`,
+  twitterTitle: () => `TTS - ${t('nav.contact')}`,
+  description: () => t('seo.contact'),
+  ogDescription: () => t('seo.contact'),
+  twitterDescription: () => t('seo.contact'),
+  ogUrl: 'https://tts-renovation.ch/contact',
+});
+
+useHead({
+  link: [{ rel: 'canonical', href: 'https://tts-renovation.ch/contact' }],
 });
 
 const nl = ref('Netherlands');
