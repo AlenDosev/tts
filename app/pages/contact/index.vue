@@ -52,8 +52,8 @@ definePageMeta({
 });
 
 useSeoMeta({
-  title: `Tts - ${t('nav.contact')}`,
-  description: t('seo.contact'),
+  title: () => `Tts - ${t('nav.contact')}`,
+  description: () => t('seo.contact'),
 });
 
 const nl = ref('Netherlands');

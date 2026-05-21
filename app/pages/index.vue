@@ -8,7 +8,7 @@
       <div class="videos-section__eyebrow">{{ $t('videos.eyebrow') }}</div>
       <h2 class="videos-section__title">{{ $t('videos.title') }}</h2>
     </div>
-    <mobile-vertical-video v-if="isMobile" />
+    <mobile-vertical-video v-if="appStore.isMobile" />
     <template v-else>
       <div class="videos-section__content">
         <vertical-video src="https://defma1gvj98ta.cloudfront.net/video-1.mov" />
@@ -20,8 +20,7 @@
 </template>
 <script setup lang="ts">
 const appStore = useAppStore();
-
-const isMobile = computed(() => appStore.isMobile);
+const { t } = useI18n();
 
 definePageMeta({
   name: 'Index',
@@ -29,8 +28,8 @@ definePageMeta({
 });
 
 useSeoMeta({
-  title: $t('seo.title'),
-  description: $t('seo.index'),
+  title: () => t('seo.title'),
+  description: () => t('seo.index'),
 });
 </script>
 <style lang="scss">

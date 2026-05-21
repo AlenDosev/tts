@@ -19,8 +19,8 @@ definePageMeta({
 });
 
 useSeoMeta({
-  title: `Tts - ${t('home.plumbing.title')}`,
-  description: t('home.plumbing.description'),
+  title: () => `Tts - ${t('home.plumbing.title')}`,
+  description: () => t('home.plumbing.description'),
 });
 
 const p1Images: string[] = [
