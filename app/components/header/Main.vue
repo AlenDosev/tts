@@ -77,23 +77,11 @@ const route = useRoute();
 
 const mobileMenuOpen = ref(false);
 
-const dropdownOptions = computed((): DropdownOption[] => {
-  const result: DropdownOption[] = [];
-
-  result.push({
-    label: 'English',
-    value: 'en',
-  });
-  result.push({
-    label: 'Deutsch',
-    value: 'de',
-  });
-  result.push({
-    label: 'Français',
-    value: 'fr',
-  });
-  return result;
-});
+const dropdownOptions: DropdownOption[] = [
+  { label: 'English', value: 'en' },
+  { label: 'Deutsch', value: 'de' },
+  { label: 'Français', value: 'fr' },
+];
 
 const selectLanguage = (lang: 'en' | 'fr' | 'de') => {
   locale.value = lang;

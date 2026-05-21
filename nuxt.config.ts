@@ -2,8 +2,9 @@ import { defineNuxtConfig } from 'nuxt/config';
 
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
+  css: ['~/main.scss'],
   devtools: { enabled: false },
-  modules: ['@pinia/nuxt', '@nuxt/eslint', '@nuxt/image', '@nuxtjs/i18n', '@pinia/nuxt', '@nuxt/scripts'],
+  modules: ['@pinia/nuxt', '@nuxt/eslint', '@nuxt/image', '@nuxtjs/i18n', '@nuxt/scripts'],
   nitro: {
     compressPublicAssets: true,
   },

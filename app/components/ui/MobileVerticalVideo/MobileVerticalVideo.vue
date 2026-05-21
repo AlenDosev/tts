@@ -1,5 +1,5 @@
 <template>
-  <div class="swiper customer-swiper__swiper">
+  <div ref="swiperEl" class="swiper customer-swiper__swiper">
     <div class="swiper-wrapper">
       <div class="swiper-slide customer-swiper__slide">
         <vertical-video src="https://defma1gvj98ta.cloudfront.net/video-1.mov" />
@@ -12,10 +12,10 @@
       </div>
     </div>
     <div class="customer-swiper__actions">
-      <button class="customer-swiper__prev customer-swiper__btn" aria-label="Previous Slide">
+      <button ref="prevEl" class="customer-swiper__prev customer-swiper__btn" aria-label="Previous Slide">
         <chevron-left-icon class="customer-swiper__icon" />
       </button>
-      <button class="customer-swiper__next customer-swiper__btn" aria-label="Next Slide">
+      <button ref="nextEl" class="customer-swiper__next customer-swiper__btn" aria-label="Next Slide">
         <chevron-right-icon class="customer-swiper__icon" />
       </button>
     </div>
@@ -29,19 +29,27 @@ import { ChevronRightIcon, ChevronLeftIcon } from '@heroicons/vue/24/outline';
 import 'swiper/css';
 import 'swiper/css/navigation';
 
-const swiper = ref<any>();
+const swiperEl = ref<HTMLElement | null>(null);
+const nextEl = ref<HTMLElement | null>(null);
+const prevEl = ref<HTMLElement | null>(null);
+const swiper = ref<Swiper | null>(null);
 
 onMounted(() => {
-  swiper.value = new Swiper('.customer-swiper__swiper', {
+  swiper.value = new Swiper(swiperEl.value!, {
     modules: [Navigation],
     navigation: {
-      nextEl: '.customer-swiper__next',
-      prevEl: '.customer-swiper__prev',
+      nextEl: nextEl.value,
+      prevEl: prevEl.value,
     },
     slidesPerView: 1.2,
     spaceBetween: 24,
     simulateTouch: true,
   });
+});
+
+onUnmounted(() => {
+  swiper.value?.destroy(true, true);
+  swiper.value = null;
 });
 </script>
 <style lang="scss" scoped>

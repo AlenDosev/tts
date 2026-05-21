@@ -101,20 +101,17 @@ const close = () => {
 
 const open = () => {
   isOpen.value = true;
-  setTimeout(() => {
+  nextTick(() => {
     const dropdownList = dropDownWrapper.value?.querySelector('.dropdown-menu__list') as HTMLElement;
     if (dropdownList) {
-      dropdownList.scrollTop = 0; // Scroll to the top
+      dropdownList.scrollTop = 0;
     }
-  }, 10);
+  });
 };
 
 const selectOption = (option: DropdownOption) => {
   close();
-
-  setTimeout(() => {
-    emit('update:modelValue', option.value);
-  }, 150);
+  emit('update:modelValue', option.value);
 };
 
 const isOptionSelected = (option: DropdownOption): boolean => {
@@ -122,14 +119,10 @@ const isOptionSelected = (option: DropdownOption): boolean => {
 };
 
 watch(isOpen, () => {
-  if (import.meta.server) {
-    return;
-  }
-
   if (isOpen.value) {
-    setTimeout(() => {
+    nextTick(() => {
       calcBtnPosition();
-    }, 10);
+    });
   }
 });
 </script>
