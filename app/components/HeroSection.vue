@@ -314,10 +314,4 @@ import { ArrowRightIcon, PhoneIcon } from '@heroicons/vue/24/outline';
     }
   }
 }
-
-@keyframes heroStickerSpin {
-  to {
-    transform: rotate(352deg);
-  }
-}
 </style>

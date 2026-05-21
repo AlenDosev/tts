@@ -93,7 +93,7 @@ const isSelected = (val: string) => {
 };
 
 onBeforeMount(() => {
-  locale.value = getSelectedLanguage();
+  locale.value = getSelectedLanguage() as 'en' | 'de' | 'fr';
 });
 </script>
 <style lang="scss">
