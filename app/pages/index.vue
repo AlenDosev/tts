@@ -49,6 +49,7 @@ useHead({
 
   @include mobile {
     padding: 80px 0;
+    overflow: hidden;
   }
 
   &__content {
