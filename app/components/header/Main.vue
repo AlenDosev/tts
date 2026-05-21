@@ -7,6 +7,7 @@
             class="header__logo"
             src="https://defma1gvj98ta.cloudfront.net/logo-light.avif"
             alt="TTS Renovation logo"
+            height="56px"
           />
         </nuxt-link>
         <div class="header__actions">
