@@ -7,6 +7,9 @@
   <footer-main />
 </template>
 <script setup lang="ts">
+import rudaFont from '~/assets/fonts/Ruda.woff2?url';
+import urbanistFont from '~/assets/fonts/Urbanist.woff2?url';
+
 const { locale } = useI18n();
 const appStore = useAppStore();
 
@@ -20,6 +23,10 @@ useHead({
   htmlAttrs: {
     lang: () => locale.value,
   },
+  link: [
+    { rel: 'preload', as: 'font', type: 'font/woff2', href: urbanistFont, crossorigin: '' },
+    { rel: 'preload', as: 'font', type: 'font/woff2', href: rudaFont, crossorigin: '' },
+  ],
 });
 
 onMounted(() => {

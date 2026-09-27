@@ -39,7 +39,7 @@ export default defineNuxtConfig({
       commonjsOptions: {
         include: [/node_modules/],
       },
-      target: 'es2023',
+      target: 'es2025',
       minify: 'oxc',
     },
   },
