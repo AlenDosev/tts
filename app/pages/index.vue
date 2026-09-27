@@ -11,9 +11,9 @@
     <mobile-vertical-video v-if="appStore.isMobile" />
     <template v-else>
       <div class="videos-section__content">
-        <vertical-video src="https://defma1gvj98ta.cloudfront.net/video-1.mov" />
-        <vertical-video src="https://defma1gvj98ta.cloudfront.net/video-2.mov" />
-        <vertical-video src="https://defma1gvj98ta.cloudfront.net/video-3.mov" />
+        <vertical-video src="https://defma1gvj98ta.cloudfront.net/video-1.av1.mp4" />
+        <vertical-video src="https://defma1gvj98ta.cloudfront.net/video-2.av1.mp4" />
+        <vertical-video src="https://defma1gvj98ta.cloudfront.net/video-4.av1.mp4" />
       </div>
     </template>
   </div>
@@ -27,18 +27,10 @@ definePageMeta({
   layout: 'default',
 });
 
-useSeoMeta({
-  title: () => t('seo.title'),
-  ogTitle: () => t('seo.title'),
-  twitterTitle: () => t('seo.title'),
+usePageSeo({
+  title: () => `${t('seo.title')} | TTS Renovation`,
   description: () => t('seo.index'),
-  ogDescription: () => t('seo.index'),
-  twitterDescription: () => t('seo.index'),
-  ogUrl: 'https://tts-renovation.ch',
-});
-
-useHead({
-  link: [{ rel: 'canonical', href: 'https://tts-renovation.ch' }],
+  path: '/',
 });
 </script>
 <style lang="scss">

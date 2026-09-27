@@ -1,4 +1,5 @@
 import { defineNuxtConfig } from 'nuxt/config';
+import { businessJsonLd } from './shared/business';
 
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
@@ -23,26 +24,7 @@ export default defineNuxtConfig({
         { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:image', content: 'https://defma1gvj98ta.cloudfront.net/contact.avif' },
       ],
-      script: [
-        {
-          type: 'application/ld+json',
-          innerHTML: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'LocalBusiness',
-            name: 'TTS Renovation',
-            url: 'https://tts-renovation.ch',
-            telephone: '+41762804757',
-            email: 'tts.renovation@outlook.com',
-            address: {
-              '@type': 'PostalAddress',
-              addressCountry: 'CH',
-            },
-            openingHours: 'Mo-Fr 08:00-17:00',
-            priceRange: '$$',
-            sameAs: ['https://www.instagram.com/tts_renovation'],
-          }),
-        },
-      ],
+      script: [{ type: 'application/ld+json', innerHTML: JSON.stringify(businessJsonLd()) }],
     },
   },
   vite: {
@@ -58,19 +40,17 @@ export default defineNuxtConfig({
         include: [/node_modules/],
       },
       target: 'es2023',
-      minify: 'esbuild',
+      minify: 'oxc',
     },
   },
   components: [
     {
       path: '~/components',
       pathPrefix: true,
-      global: true,
     },
     {
       path: '~/components/ui',
       pathPrefix: false,
-      global: true,
     },
   ],
   i18n: {

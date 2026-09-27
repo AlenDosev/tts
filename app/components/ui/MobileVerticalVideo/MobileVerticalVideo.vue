@@ -2,13 +2,13 @@
   <div ref="swiperEl" class="swiper customer-swiper__swiper">
     <div class="swiper-wrapper">
       <div class="swiper-slide customer-swiper__slide">
-        <vertical-video src="https://defma1gvj98ta.cloudfront.net/video-1.mov" />
+        <vertical-video src="https://defma1gvj98ta.cloudfront.net/video-1.av1.mp4" />
       </div>
       <div class="swiper-slide customer-swiper__slide">
-        <vertical-video src="https://defma1gvj98ta.cloudfront.net/video-2.mov" />
+        <vertical-video src="https://defma1gvj98ta.cloudfront.net/video-2.av1.mp4" />
       </div>
       <div class="swiper-slide customer-swiper__slide">
-        <vertical-video src="https://defma1gvj98ta.cloudfront.net/video-3.mov" />
+        <vertical-video src="https://defma1gvj98ta.cloudfront.net/video-4.av1.mp4" />
       </div>
     </div>
     <div class="customer-swiper__actions">
@@ -32,7 +32,7 @@ import 'swiper/css/navigation';
 const swiperEl = ref<HTMLElement | null>(null);
 const nextEl = ref<HTMLElement | null>(null);
 const prevEl = ref<HTMLElement | null>(null);
-const swiper = ref<Swiper | null>(null);
+const swiper = shallowRef<Swiper | null>(null);
 
 onMounted(() => {
   swiper.value = new Swiper(swiperEl.value!, {

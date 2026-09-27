@@ -84,7 +84,7 @@ const dropdownOptions: DropdownOption[] = [
   { label: 'Français', value: 'fr' },
 ];
 
-const selectLanguage = (lang: 'en' | 'fr' | 'de') => {
+const selectLanguage = (lang: SupportedLocale) => {
   locale.value = lang;
   localStorage.setItem('tts_selectedLocale', lang);
 };
@@ -94,7 +94,7 @@ const isSelected = (val: string) => {
 };
 
 onBeforeMount(() => {
-  locale.value = getSelectedLanguage() as 'en' | 'de' | 'fr';
+  locale.value = getSelectedLanguage();
 });
 </script>
 <style lang="scss">

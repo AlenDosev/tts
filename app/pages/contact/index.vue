@@ -13,9 +13,9 @@
           <span class="contact__grid-element-label">{{ $t('contact.emailUs') }}</span>
         </div>
         <div class="contact__grid-element-bottom">
-          <nuxt-link-locale href="mailto:info@colect.io" class="contact__grid-element-link">
+          <a href="mailto:tts.renovation@outlook.com" class="contact__grid-element-link">
             tts.renovation@outlook.com
-          </nuxt-link-locale>
+          </a>
           <span class="contact__grid-element-description">{{ $t('contact.replies') }}</span>
         </div>
       </div>
@@ -25,9 +25,7 @@
           <span class="contact__grid-element-label">{{ $t('contact.callUs') }}</span>
         </div>
         <div class="contact__grid-element-bottom">
-          <nuxt-link-locale href="tel:+31355334680" class="contact__grid-element-link">
-            +41 76 280 47 57
-          </nuxt-link-locale>
+          <a href="tel:+41762804757" class="contact__grid-element-link">+41 76 280 47 57</a>
           <span class="contact__grid-element-description">{{ timesOpen }}</span>
         </div>
       </div>
@@ -38,11 +36,12 @@
       class="contact__office-img"
       src="https://defma1gvj98ta.cloudfront.net/contact.avif"
       alt="TTS Renovation team on a renovation site"
+      fetchpriority="high"
+      :preload="{ fetchPriority: 'high' }"
     />
   </div>
 </template>
 <script setup lang="ts">
-import { defaultTo } from 'ramda';
 import { EnvelopeIcon, PhoneIcon } from '@heroicons/vue/24/outline';
 
 const { t, locale } = useI18n();
@@ -51,41 +50,20 @@ definePageMeta({
   name: 'Contact',
 });
 
-useSeoMeta({
-  title: () => `TTS - ${t('nav.contact')}`,
-  ogTitle: () => `TTS - ${t('nav.contact')}`,
-  twitterTitle: () => `TTS - ${t('nav.contact')}`,
+usePageSeo({
+  title: () => `${t('nav.contact')} | TTS Renovation`,
   description: () => t('seo.contact'),
-  ogDescription: () => t('seo.contact'),
-  twitterDescription: () => t('seo.contact'),
-  ogUrl: 'https://tts-renovation.ch/contact',
+  path: '/contact',
 });
 
-useHead({
-  link: [{ rel: 'canonical', href: 'https://tts-renovation.ch/contact' }],
+const timesOpen = computed(() => {
+  const weekday = (date: Date) =>
+    Intl.DateTimeFormat(locale.value, { weekday: 'short', timeZone: 'UTC' }).format(date).replace(/\./g, '');
+  const monday = weekday(new Date(Date.UTC(2023, 0, 2)));
+  const friday = weekday(new Date(Date.UTC(2023, 0, 6)));
+
+  return `${monday}-${friday} 8AM-5PM`;
 });
-
-const nl = ref('Netherlands');
-const fr = ref('France');
-const timesOpen = ref('Mon-Fri 9AM-5PM');
-
-const calculateNames = () => {
-  const localIntl = new Intl.DisplayNames([locale.value], {
-    type: 'region',
-  });
-
-  nl.value = defaultTo('Netherlands', localIntl.of('NL'));
-  fr.value = defaultTo('France', localIntl.of('FR'));
-
-  const mondayDate = new Date(Date.UTC(2023, 0, 2));
-  const fridayDate = new Date(Date.UTC(2023, 0, 6));
-  const monday = Intl.DateTimeFormat(locale.value, { weekday: 'short' }).format(mondayDate).replace(/\./g, '');
-  const friday = Intl.DateTimeFormat(locale.value, { weekday: 'short' }).format(fridayDate).replace(/\./g, '');
-  timesOpen.value = `${monday}-${friday} 8AM-5PM`;
-};
-
-onBeforeMount(() => calculateNames());
-watch(locale, () => calculateNames());
 </script>
 <style lang="scss" scoped>
 .contact {
