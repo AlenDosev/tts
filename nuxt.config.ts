@@ -58,19 +58,17 @@ export default defineNuxtConfig({
         include: [/node_modules/],
       },
       target: 'es2023',
-      minify: 'esbuild',
+      minify: 'oxc',
     },
   },
   components: [
     {
       path: '~/components',
       pathPrefix: true,
-      global: true,
     },
     {
       path: '~/components/ui',
       pathPrefix: false,
-      global: true,
     },
   ],
   i18n: {

@@ -27,7 +27,7 @@ defineProps({
 const swiperEl = ref<HTMLElement | null>(null);
 const nextEl = ref<HTMLElement | null>(null);
 const prevEl = ref<HTMLElement | null>(null);
-const swiper = ref<Swiper | null>(null);
+const swiper = shallowRef<Swiper | null>(null);
 
 onMounted(() => {
   swiper.value = new Swiper(swiperEl.value!, {
