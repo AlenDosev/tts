@@ -1,2 +1,17 @@
-User-Agent: *
-Disallow:
+# Search engines and AI assistants are welcome to crawl and cite this site.
+User-agent: *
+Allow: /
+
+User-agent: ClaudeBot
+User-agent: Claude-User
+User-agent: Claude-SearchBot
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+Allow: /
+
+Sitemap: https://tts-renovation.ch/sitemap.xml

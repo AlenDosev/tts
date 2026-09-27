@@ -27,18 +27,10 @@ definePageMeta({
   layout: 'default',
 });
 
-useSeoMeta({
-  title: () => t('seo.title'),
-  ogTitle: () => t('seo.title'),
-  twitterTitle: () => t('seo.title'),
+usePageSeo({
+  title: () => `${t('seo.title')} | TTS Renovation`,
   description: () => t('seo.index'),
-  ogDescription: () => t('seo.index'),
-  twitterDescription: () => t('seo.index'),
-  ogUrl: 'https://tts-renovation.ch',
-});
-
-useHead({
-  link: [{ rel: 'canonical', href: 'https://tts-renovation.ch' }],
+  path: '/',
 });
 </script>
 <style lang="scss">

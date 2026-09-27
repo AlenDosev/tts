@@ -6,7 +6,7 @@
   </div>
   <div class="page__gallery">
     <div class="renovation__content">
-      <swipe-gallery :images="p1Images" />
+      <swipe-gallery :images="p1Images" priority />
       <swipe-gallery :images="p2Images" class="renovation__landscape" />
     </div>
   </div>
@@ -18,18 +18,10 @@ definePageMeta({
   name: 'Renovation',
 });
 
-useSeoMeta({
-  title: () => `TTS - ${t('home.renovation.title')}`,
-  ogTitle: () => `TTS - ${t('home.renovation.title')}`,
-  twitterTitle: () => `TTS - ${t('home.renovation.title')}`,
+usePageSeo({
+  title: () => `${t('home.renovation.title')} ${t('seo.inSwitzerland')} | TTS Renovation`,
   description: () => t('seo.renovation'),
-  ogDescription: () => t('seo.renovation'),
-  twitterDescription: () => t('seo.renovation'),
-  ogUrl: 'https://tts-renovation.ch/renovation',
-});
-
-useHead({
-  link: [{ rel: 'canonical', href: 'https://tts-renovation.ch/renovation' }],
+  path: '/renovation',
 });
 
 const p1Images: string[] = [

@@ -53,6 +53,29 @@
 
 <script setup lang="ts">
 import { ArrowRightIcon, PhoneIcon } from '@heroicons/vue/24/outline';
+
+// The largest collage tile is the first thing visitors see (LCP), but as a CSS
+// background it is only discovered after the stylesheet loads, so preload it.
+useHead({
+  link: [
+    {
+      rel: 'preload',
+      as: 'image',
+      type: 'image/avif',
+      href: 'https://defma1gvj98ta.cloudfront.net/grid/dpdi5gsodi8lrftns8rt.avif',
+      media: '(min-width: 768px)',
+      fetchpriority: 'high',
+    },
+    {
+      rel: 'preload',
+      as: 'image',
+      type: 'image/avif',
+      href: 'https://defma1gvj98ta.cloudfront.net/grid/ymicspvehbncwt1utiwu.avif',
+      media: '(max-width: 767px)',
+      fetchpriority: 'high',
+    },
+  ],
+});
 </script>
 
 <style lang="scss" scoped>

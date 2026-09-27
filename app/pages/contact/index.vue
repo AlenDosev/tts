@@ -36,6 +36,8 @@
       class="contact__office-img"
       src="https://defma1gvj98ta.cloudfront.net/contact.avif"
       alt="TTS Renovation team on a renovation site"
+      fetchpriority="high"
+      :preload="{ fetchPriority: 'high' }"
     />
   </div>
 </template>
@@ -48,18 +50,10 @@ definePageMeta({
   name: 'Contact',
 });
 
-useSeoMeta({
-  title: () => `TTS - ${t('nav.contact')}`,
-  ogTitle: () => `TTS - ${t('nav.contact')}`,
-  twitterTitle: () => `TTS - ${t('nav.contact')}`,
+usePageSeo({
+  title: () => `${t('nav.contact')} | TTS Renovation`,
   description: () => t('seo.contact'),
-  ogDescription: () => t('seo.contact'),
-  twitterDescription: () => t('seo.contact'),
-  ogUrl: 'https://tts-renovation.ch/contact',
-});
-
-useHead({
-  link: [{ rel: 'canonical', href: 'https://tts-renovation.ch/contact' }],
+  path: '/contact',
 });
 
 const timesOpen = computed(() => {
