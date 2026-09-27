@@ -1,9 +1,22 @@
 <template>
   <div class="vertical-video">
-    <video ref="videoRef" class="vertical-video__element" muted :src="props.src" />
-    <button class="vertical-video__btn" aria-label="Pause Play">
-      <pause-icon v-show="isPlaying" class="vertical-video__btn-icon" @click="pause" />
-      <play-icon v-show="!isPlaying" class="vertical-video__btn-icon" @click="play" />
+    <video
+      ref="videoRef"
+      class="vertical-video__element"
+      muted
+      playsinline
+      preload="metadata"
+      :src="props.src"
+      @ended="isPlaying = false"
+    />
+    <button
+      type="button"
+      class="vertical-video__btn"
+      :aria-label="isPlaying ? 'Pause video' : 'Play video'"
+      @click="togglePlay"
+    >
+      <pause-icon v-show="isPlaying" class="vertical-video__btn-icon" aria-hidden="true" />
+      <play-icon v-show="!isPlaying" class="vertical-video__btn-icon" aria-hidden="true" />
     </button>
   </div>
 </template>
@@ -31,7 +44,17 @@ const pause = () => {
 const play = () => {
   isPlaying.value = true;
   if (videoRef.value) {
-    videoRef.value.play();
+    videoRef.value.play().catch(() => {
+      isPlaying.value = false;
+    });
+  }
+};
+
+const togglePlay = () => {
+  if (isPlaying.value) {
+    pause();
+  } else {
+    play();
   }
 };
 </script>
