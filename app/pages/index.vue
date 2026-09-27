@@ -11,9 +11,9 @@
     <mobile-vertical-video v-if="appStore.isMobile" />
     <template v-else>
       <div class="videos-section__content">
-        <vertical-video src="https://defma1gvj98ta.cloudfront.net/video-1.mov" />
-        <vertical-video src="https://defma1gvj98ta.cloudfront.net/video-2.mov" />
-        <vertical-video src="https://defma1gvj98ta.cloudfront.net/video-3.mov" />
+        <vertical-video src="https://defma1gvj98ta.cloudfront.net/video-1.av1.mp4" />
+        <vertical-video src="https://defma1gvj98ta.cloudfront.net/video-2.av1.mp4" />
+        <vertical-video src="https://defma1gvj98ta.cloudfront.net/video-4.av1.mp4" />
       </div>
     </template>
   </div>
